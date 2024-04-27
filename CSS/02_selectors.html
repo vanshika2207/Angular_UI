@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors</title>
+  <style>
+    h2#green-heading{
+      color:green
+    }
+    h2.blue-heading{
+      color: blue;
+    }
+    .primary-heading{
+      color: aqua;
+    }
+    #welcome{
+      background-color: cadetblue;
+    }
+    /* Multiple selectors */
+    #welcome, #about{
+      border: 10px solid black;
+      padding: 10px;
+      margin-bottom: 5px;
+    }
+    /* Nested Selector */
+    #welcome p{
+      font-size: 20px;
+    }
+    /* element selector  */
+    body{
+      background-color: pink;
+    }
+
+  </style>
+</head>
+<body>
+  <h1 class="primary-heading">Vanshika Saxena</h1>
+  <div id="welcome" >
+    <h2 id="green-heading">Welcome</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, ea? Hic dicta, quaerat, fugit esse perspiciatis sunt ullam laborum culpa error impedit inventore tempora voluptatibus placeat dolores unde deserunt corporis!</p>
+  </div>
+  <div id="about">
+    <h2 class="blue-heading">About</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, ea? Hic dicta, quaerat, fugit esse perspiciatis sunt ullam laborum culpa error impedit inventore tempora voluptatibus placeat dolores unde deserunt corporis!</p>
+  </div>
+  
+</body>
+</html>
