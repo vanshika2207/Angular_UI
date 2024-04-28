@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Before and After</title>
+</head>
+<style>
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:black;
+    color: white;
+    margin:0;
+  }
+  header{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: url('/HTML/images/my-1.png') no-repeat center center/cover;
+    opacity:0.4;
+  }
+  header >h1{
+    font-size: 4rem;
+    margin:1rem
+  }
+  .is-required::before{
+    content:'*';
+    color: red;
+    padding-left: 2px;
+  }
+
+</style>
+<body>
+  <!-- <label class="is-required" for="name">Name</label>
+  <input type="text"> -->
+  <h1>Hello World</h1>
+  <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, assumenda quasi. Reiciendis quis, minus eligendi excepturi quo omnis ratione voluptate. Itaque, praesentium quidem quis est quasi rem dolor eligendi deleniti</P>
+  <section>
+    <h3>Lorem, ipsum dolor.</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto error sunt, debitis consectetur, excepturi voluptate accusantium hic aspernatur exercitationem doloribus veritatis minus optio ea. Libero, quo. Est error in perferendis.</p>
+  </section>
+</body>
+</html>
