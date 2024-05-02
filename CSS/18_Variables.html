@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables</title>
+  <style>
+    :root{
+      --max-width:1100px;
+      --primary-color:steelblue;
+      --secondary-color:skyblue;
+      --light-color:lightgray;
+     
+    }
+    *{
+      margin:0;
+      padding: 0;
+
+    }
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.4;
+    
+      background-color: var(--light-color);
+
+    }
+    header{
+      background-color:var(--primary-color);
+      color: white;
+      border-bottom: 5px var(--secondary-color) solid;
+      text-align: center;
+    }
+    .container{
+      display:flex;
+      margin:auto;
+      max-width: var(--max-width);
+    }
+    .box{
+      background-color: var(--primary-color);
+      border-bottom:  5px var(--secondary-color) solid;
+      color: white;
+      padding: 1rem;
+      margin: 1rem;;
+    }
+    .box{
+      --box-1-width:1;
+      --box-2-width:2;
+
+    }
+  .box-1{
+    flex :var(--box-1-width)
+  }
+  .box-2{
+    flex :var(--box-2-width)
+  }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CSS variables</h1>
+  </header>
+  <div class="container">
+    <div class="box box-1">
+      <h3>heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolore debitis qui possimus reiciendis optio nihil ex necessitatibus nulla minima dolor, minus nesciunt nemo excepturi animi. Sapiente saepe minima quaerat.</p>
+
+    </div>
+    <div class="box box-2">
+      <h3>heading</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quidem maxime provident? Veniam debitis, quis vero cumque reiciendis saepe pariatur, asperiores facere at minima expedita vitae quia necessitatibus fugit alias?</p>
+
+    </div>
+
+  </div>
+</body>
+</html>
