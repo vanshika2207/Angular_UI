@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Targeted selectors</title>
-  <style>
-    /* all tag under div */
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targeted selectors</title>
+    <style>
+    /* all tag under div-all children */
     div p{
       background-color: aliceblue;
     }
@@ -26,37 +26,43 @@
     }
     a[target='_blank']{
       background-color: blueviolet;
+      color: chartreuse;
 
     }
     /* specific attribute */
     input[type='text'],input[type='email']{
       width:100%;
       margin-bottom: 10px;
+      color: aqua;
     }
   </style>
-</head>
-<body>
-  <div>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, quis magni? Ad nisi beatae expedita doloremque laborum, vero atque reiciendis.</p>
-    <ul>
-      <li>Item 1</li>
-      <li><p>Item 2</p></li>
-      <li>Item 3</li>
-    </ul>
-   
-  </div>
-  <p>Lorem ipsum dolor sit amet.</p>
-  <p>Lorem ipsum dolor sit amet.</p>
-  <p>Lorem ipsum dolor sit amet.</p>
-  <p>Lorem ipsum dolor sit amet.</p>
-  <p>Lorem ipsum dolor sit amet.</p>
-  <a href="#">page1</a> <a href="#" target="_self">page 2</a><a href="https://google.com" target="_blank">google</a>
-  <br>
-  <br>
-  <form >
-    <input type="text" placeholder="name">
-    <input type="email" placeholder="email">
-    <input type="submit" value="Submit">
-  </form>
-</body>
+  </head>
+  <body>
+    <div>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+        quis magni? Ad nisi beatae expedita doloremque laborum, vero atque
+        reiciendis.</p>
+      <p>Lorem</p>
+      <ul>
+        <li>Item 1</li>
+        <li><p>Item 2</p></li>
+        <li>Item 3</li>
+      </ul>
+      <p>lorem</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <a href="#">page1</a> <a href="#" target="_blank">page 2</a><a
+      href="https://google.com" target="_blank">google</a>
+    <br>
+    <br>
+    <form>
+      <input type="text" placeholder="name">
+      <input type="email" placeholder="email">
+      <input type="submit" value="Submit">
+    </form>
+  </body>
 </html>

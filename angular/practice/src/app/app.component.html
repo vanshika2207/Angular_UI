@@ -1,0 +1,15 @@
+<p appHighlight appTextstyle>this is the example of directive</p>
+<p appHostdirective>Lorem ipsum dolor sit amet.</p>
+<p [appHighlight]="'lightblue'">Lorem ipsum, dolor sit amet consectetur
+  adipisicing.</p>
+<div *appStructural="numbers.length<3">
+  <p>{{numbers}}</p>
+</div>
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="6">value is 6</p>
+  <p *ngSwitchCase="7">value is 7</p>
+  <p *ngSwitchDefault>value is 8</p>
+
+</div>
+<app-component-1></app-component-1>
+<app-component-2></app-component-2>

@@ -1,0 +1,16 @@
+<h2 class="title">Product World</h2>
+<ul class="products">
+  <li *ngFor="let product of products; let i = index">
+    <app-product [productItems]="product" [i]="i"
+      (productdetails)="displayInfo($event)"></app-product>
+  </li>
+</ul>
+<div *ngIf="selectedProduct" class="product-info">
+  <img id="prod-img" [src]="selectedProduct.imageUrl"
+    alt="{{ selectedProduct.name }}">
+  <h2 class="name">{{ selectedProduct.name }}</h2>
+  <p class="category">Category: {{ selectedProduct.category }}</p>
+  <p class="price">Price: ${{ selectedProduct.price }}</p>
+  <p class="stock">Stock: {{ selectedProduct.availQuantity }}</p>
+  <button>Add to Cart</button>
+</div>

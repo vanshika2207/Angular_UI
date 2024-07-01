@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadget Wall</title>
+    <link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap"
+      rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body class="body">
+    <h1 id="heading" class="header">Gadget Wall</h1>
+    <div class="container">
+      <div class="row">
+        <div class="card" *ngFor="let item of product; let i = index">
+          <div class="card-body">
+            <p id="product-name{{i+1}}" class="card-title">{{item.name}}</p>
+            <a href="#" (click)="showDescription(item.id)">
+              <img id="image{{i+1}}" src="{{item.imageUrl}}" alt="{{item.name}}"
+                class="card-img-top">
+            </a>
+            <div id="description{{i+1}}"
+              *ngIf="item.id === selectedProductId">{{getDescription(item.id)}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

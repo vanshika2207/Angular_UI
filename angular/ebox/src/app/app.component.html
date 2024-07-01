@@ -1,0 +1,20 @@
+<!--Fill your code here-->
+<body class="body">
+  <h1 id="heading">Profile Pic Styling</h1>
+  <select id="edge" [(ngModel)]="edge">
+    <option value="pro-pic-sharp">Sharp Edge</option>
+    <option value="pro-pic-bordered">Rounded Edge</option>
+  </select>
+  <select id="size" [(ngModel)]="size">
+    <option value="small">Small</option>
+    <option value="medium">Medium</option>
+    <option value="large">Largel</option>
+  </select>
+  <br>
+  <button type="submit" id="apply-style" (click)="applyStyle()">Apply
+    Style</button>
+  <div id='image' [ngClass]="appliedClasses">
+    <div id="divi">this is image</div>
+
+  </div>
+</body>

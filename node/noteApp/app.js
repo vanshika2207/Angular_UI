@@ -4,6 +4,7 @@ const chalk = require("chalk");
 
 yargs.version("1.1.0");
 //add command
+debugger;
 yargs.command({
   command: "add",
   describe: "Add a new note",

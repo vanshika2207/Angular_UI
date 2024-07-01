@@ -1,6 +1,8 @@
-// alert("hello world");
+// alert("hello world"); give us pop-up message
+
 // let js="amazing";
 // // if (js=="amazing") alert("js is fun");
+
 /*
 // Values
 console.log(23)
@@ -172,6 +174,7 @@ console.log(typeof String(23),23);
 //boolean to number
 console.log(Number(true));
 console.log(Number(false));
+
 //boolean to string
 console.log(String(true));
 console.log(typeof String(false));
@@ -310,6 +313,18 @@ else{
   console.log("not a valid day");
 }
 
+let x=0
+switch(x){
+case 0:
+  console.log(0)
+  break;
+case 1:
+case 2:
+  console.log(1) 
+  break;
+default:
+  console.log("hello")
+}
 //ternary  operator
 
 const age=18;

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+            .hidden{
+                display:none;
+            }
+            h1{
+                color:darkblue;
+            }
+            h2,label{
+              color:lightseagreen
+            }
+            h3{
+              color: blue;
+            }
+            .div1{
+              display: inline;
+              float: left;
+              box-shadow: 1px 1px lightblue;
+              background-color: aliceblue;
+              padding-top:20px;
+              padding-left: 50px;
+              padding-right: 50px;
+              padding-bottom: 20px;
+              margin-bottom: 20px;
+
+            }
+            .div2{
+              display: inline;
+              float: right;
+              box-shadow: -1px -1px lightblue;
+              padding-top:20px;
+              padding-left: 50px;
+              padding-right: 50px;
+              padding-bottom: 20px;
+              background-color: aliceblue;              
+
+            }
+            button{
+              background-color: cadetblue;
+            }
+            #div3{
+              clear: both;
+              
+            }
+            table,th,td{
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+
+        </style>
+
+  </head>
+  <body>
+    <h1>Market Billing System</h1>
+    <div class="div1">
+      <h2>Add Product Item</h2>
+      <br>
+      <label for="name">Product Name</label>
+      <br>
+      <input type="text" id="name" for="name">
+      <br>
+      <label for="price">Price</label>
+      <br>
+      <input type="text" id="price">
+      <br>
+      <label for="quantity">Quantity</label>
+      <br>
+      <input type="text" id="quantity">
+      <br>
+      <button id="addItem" onclick="addItem()">+Add Item</button>
+
+    </div>
+    <div class="div2">
+      <h2>Bill Details of total items</h2>
+      <h3 id="net_total">Your net amount is Rs.0</h3>
+
+    </div>
+    <div id="div3" class="hidden">
+      <table>
+        <thead>
+          <th>Product name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Fill your code here -->
+    <script>
+      let initial_result=0
+      function addItem(){
+        const Product=document.querySelector("#name").value 
+        const Price=parseInt(document.querySelector("#price").value)
+        const Quantity=parseInt(document.querySelector("#quantity").value)
+        let result=Price*Quantity
+        const display=document.querySelector("#net_total")
+        initial_result+=result
+        display.innerHTML=`Your net amount is Rs.${initial_result}`
+        const div=document.getElementById('div3')
+        div3.classList.remove('hidden')
+        const tbody=document.querySelector('tbody')
+        const newRow=document.createElement('tr')
+        const nameCell=document.createElement('td')
+        nameCell.textContent=Product
+        newRow.appendChild(nameCell)
+        const priceCell = document.createElement("td");
+        priceCell.textContent = Price;
+        newRow.appendChild(priceCell);
+
+        const quantityCell = document.createElement("td");
+        quantityCell.textContent = Quantity;
+        newRow.appendChild(quantityCell);
+
+        const totalCell = document.createElement("td");
+        totalCell.textContent = result;
+        newRow.appendChild(totalCell);
+
+        // Append the new row to the table
+        tbody.appendChild(newRow);
+
+
+
+
+        
+      }
+
+
+    </script>
+
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+    <script>
+      function getin() {
+        const username = document.querySelector("#username").value;
+        const password = document.querySelector("#password").value;
+        
+        if (username === 'john' && password === 'john123') {
+          const image = document.createElement('img');
+          image.src = 'https://app.e-box.co.in/uploads/Image/ebox.png';
+          const after = document.querySelector("#first");
+          after.classList.add('hidden');
+          document.body.appendChild(image);
+          const second = document.querySelector('#second');
+          second.classList.remove('hidden');
+        } else {
+          const error = document.getElementById("error");
+          error.innerHTML = "Incorrect username/Password";
+          error.style.color = 'red';
+        }
+      }
+
+      let count = 0;
+
+      function like() {
+        count += 1;
+        const total = document.querySelector('#total');
+        total.innerHTML = `${count} likes`;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="first">
+      <h2>Login</h2>
+      <label>Username:</label>
+      <input type="text" id="username">
+      <br>
+      <label>Password:</label>
+      <input type="password" id="password">
+      <button id='login' onclick="getin()">login</button>
+      <div id="error"></div>
+    </div>
+    <div id="second" class="hidden">
+      <button id='likes' ondblclick="like()">Like</button>
+      <p id='total'></p>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+            .hidden{
+                display:none;
+            }
+            h1{
+                color:darkblue;
+            }
+
+        </style>
+
+  </head>
+  <body>
+
+    <!-- Fill your code here -->
+    <script>
+
+
+    </script>
+
+  </body>
+</html>

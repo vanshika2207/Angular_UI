@@ -1,86 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>List and Tables</title>
-</head>
-<body>
-  <!-- Unordered List -->
-  <ul>
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
-    <li>Item 4</li>
-    <li>Item 5</li>
-    
-  </ul>
-  <ul style="list-style:square;">
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
-    <li>Item 4</li>
-    <li>Item 5</li>
-    
-  </ul>
-  <!-- Ordered list -->
-  <ol type="i">
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
-    <li>Item 4</li>
-    <li>Item 5</li>
-    
-  </ol>
-
-  <ol type="i" start="70">
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
-    <li>Item 4</li>
-    <li>Item 5</li>
-    
-  </ol>
-  <!-- Nested list -->
-  <ul>
-    <li>Item 1</li>
-    <li>Item 2</li>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List and Tables</title>
+    <style>
+      table,th,td{
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Unordered List -->
     <ul>
-      <li>nested item 1</li>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+
     </ul>
-    <ol>
-      <li>nested item 2</li>
+    <ul style="list-style:square;">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+
+    </ul>
+    <!-- Ordered list -->
+    <ol type="i">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+
     </ol>
 
-  </ul>
-  <!-- Tables -->
-  <table style="width: 600px;">
-    <thead>
-      <tr>
-        <th> First name </th>
-        <th> Last name </th>
-        <th> Email name </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Vanshika</td>
-        <td>Saxena</td>
-        <td>vanshika@gmail.com</td>
-      </tr>
-   
-      <tr>
-        <td>Vardaan</td>
-        <td>Saxena</td>
-        <td>vardaan@gmail.com</td>
-      </tr>
-    
-      <tr>
-        <td>Deepti</td>
-        <td>Saxena</td>
-        <td>deeptia@gmail.com</td>
-      </tr>
-    </tbody>
-  </table>
-</body>
+    <ol type="i" start="70">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+
+    </ol>
+    <!-- Nested list -->
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <ul>
+        <li>nested item 1</li>
+      </ul>
+      <ol>
+        <li>nested item 2</li>
+      </ol>
+
+    </ul>
+    <!-- Tables -->
+    <table style="width: 600px;border: 1px solid black,;">
+      <thead style="border: 1px solid black;"">
+        <tr>
+          <th colspan=3
+            style="border: 1px solid black; border-collapse: collapse;"> First
+            name </th>
+          <th> Last name </th>
+          <th> Email name </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan=3>Vanshika</td>
+
+          <td>Saxena</td>
+          <td>vanshika@gmail.com</td>
+        </tr>
+
+        <tr>
+          <td colspan=3>Vardaan</td>
+          <td>Saxena</td>
+          <td>vardaan@gmail.com</td>
+        </tr>
+
+        <tr>
+          <td colspan=3>Deepti</td>
+          <td>Saxena</td>
+          <td>deeptia@gmail.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>

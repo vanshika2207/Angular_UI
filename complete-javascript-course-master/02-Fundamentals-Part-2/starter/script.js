@@ -175,7 +175,7 @@
 // const tips=[console.log(bills[0]),console.log(bills[1]),console.log(bills[2])]
 // console.log(tips)
 
-// //Array
+// objects
 
 // const vanshika={
 //   firstName:'Vanshika',
