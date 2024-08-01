@@ -24,15 +24,18 @@ const user = mongoose.model("User", {
   },
 });
 
-const me = new user({
-  name: "Vanshika",
-  age: -21,
-});
-
-me.save()
-  .then(() => {
-    console.log(me);
+const me = user
+  .create({
+    name: "Vanshika",
+    age: 21,
   })
-  .catch((error) => {
-    console.log(error);
-  });
+  .then((data) => console.log(data));
+
+// me.save()
+//   .then(() => {
+//     console.log(me);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+console.log(me);

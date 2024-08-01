@@ -40,8 +40,8 @@ const databaseName = "vanshika-manager";
 
 const doWorkCallback = (callback) => {
   setTimeout(() => {
-    callback("this is error", undefined);
-    callback("undefined", "success");
+    // callback("this is error", undefined);
+    callback(undefined, "success");
   }, 2000);
 };
 doWorkCallback((error, result) => {
@@ -53,7 +53,7 @@ doWorkCallback((error, result) => {
 
 const doWorkPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    // resolve("good");
+    resolve("good");
     reject("bad");
   }, 2000);
 });
