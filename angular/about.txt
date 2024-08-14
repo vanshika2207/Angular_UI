@@ -1,0 +1,98 @@
+What is angular ?
+
+-frontend javascript framework
+-collection of tools and features (CLI,Debugging Tools ,IDE Plugins)
+
+Why would you use Angular ?
+
+-simplify the process of building complex ,interactive web user interface
+1)declarative code {update states synchronously}
+2) Sepration of concern through component {modular code and better design}
+3) Object-oriented programming concept and prnciples
+4) It is based on typeScript
+
+#typescript is extension over a javaScript -add static type to javaScript
+
+Angular Evolution and Stability
+
+-backward compatible
+#AngularJS-2010
+2016-Angular 2
+2017-Angular 4
+//2 version every year
+//older version of angular are used
+2022-Angular 14 and 15 Standalone components
+2023-Angular 16 Signals
+
+
+Note-Attribute and Property Binding
+-Attribute are defined in the HTML markup and provide additional information about an element
+-specified within the opening tag of an element
+Example: <input type="text" value="hello">
+-Properties are defined on DOM objects and represent the current state or value of an element.
+-They are accessed and manipulated directly on the DOM object in JavaScript
+Example: inputElement.value = "hello";
+Binding Syntax:
+
+Property binding uses square brackets directly around the property name: [property]="expression".
+Attribute binding uses the attr. prefix followed by the attribute name in square brackets: [attr.attributeName]="expression".
+Use Cases:
+
+Use property binding for standard HTML properties like value, disabled, checked, etc.
+Use attribute binding for custom attributes, aria-* attributes, and attributes that don't have corresponding propertie
+
+ANGULAR CHANGE DETECTION MECHANISM
+
+1)zone.js [SINCE ANGULAR 2](by default) :Automatically listens to all the events
+2)Signals -using signals to notify Angular about value changes and require UI updates
+Require usage of special "signal" instruction and code , supported since angular 16.
+
+A signal is an object that stores a value(any type of value,including nested objects)
+Angular manages subscription to the signal to get notified about value changes.
+When a change occurs,Angular is then able to update the part of the UI that needs updating.
+Signal are trackable data container.
+1) import signal from angular/core 
+2) initialize the signal =signal()
+3) set signal=.set()
+4) read =as a function
+
+#signals offer a comprehensive replacement, 
+particularly in change detection. While Zone.js’s 
+change detection needs to go through all components to identify changes and update the view, signals respond precisely
+to changes in the controller, instantly updating the view. This targeted approach significantly enhances
+performance in larger-scale Angular projects.
+
+input()=alternative to @Input //signal,cannot use set() property ,they are readonly
+output()=automatically trigger eventEmitter automatically//does not create signal ,just a shorthand ,just if we don't want to use decorators
+
+rule out the possibility of undefined =!
+union types=|optional type feature
+?=it might not be initialize
+type /interface for defining types
+with interface only object types 
+
+@for(){}=angular17
+@if(){}@else{}=angular17
+
+content projection=ng-content=Content projection is a pattern in which you insert, or project, the content you want to use inside another component.
+
+For Modules=@NgModule declarator imported from '@angular/core'
+standalone=false or no need
+no imports array
+in main.ts=import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+platformBrowserDynamic().bootstrapModule(AppModule);
+
+in AppModule: bootstrap:[AppModule]
+
+#if standalone=true
+import { bootstrapApplication } from '@angular/platform-browser';
+// bootstrapApplication(AppComponent).catch((err) => console.error(err));
+
+Note :- can mix standalone and non-standalone components in AppModule
+in declaration section =add Non-standalone components
+in imports section add =standalone components
+
+import {BrowserModule} from '@angular/platform-browser'=contain crucial features add in import section,contain DatePipe
+
+BrowserModule is used only in AppModule 
+other module use CommonModule

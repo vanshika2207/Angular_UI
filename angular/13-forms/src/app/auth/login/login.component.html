@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit()">
+  <h2>Login</h2>
+
+  <div class="control-row" [formGroup]="form">
+    <div class="control no-margin">
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" />
+    </div>
+
+    <div class="control no-margin">
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" />
+    </div>
+
+    <button class="button" type="submit">Login</button>
+  </div>
+  @if(form.get('email')?.invalid && form.get('email')?.touched){
+  <p>Invalid email</p>
+  }
+  @if(form.get('password')?.invalid && form.get('password')?.touched){
+  <p>Invalid password</p>
+  }
+</form>
