@@ -1,39 +1,39 @@
 const mongoose = require("mongoose");
+const { isAlpha } = require("validator");
+mongoose.connect("mongodb://127.0.0.1:27017/test1");
 
-mongoose.connect("mongodb://127.0.0.1:27017/mydb1");
-
-const schema = new mongoose.Schema({
+const schema = mongoose.Schema({
   name: {
     type: String,
     required: true,
     trim: true,
+    lowercase: true,
   },
   age: {
     type: Number,
-    required: true,
+    default: 18,
+    validate(value) {
+      if (value < 0) {
+        throw new Error("Age must be positive");
+      }
+    },
   },
 });
+const cat = mongoose.model("user", schema);
 
-const User = mongoose.model("User", schema);
+const me = cat
+  .create({
+    name: "Vanshika",
+    age: 21,
+  })
+  .then((data) => console.log(data));
+console.log(me);
 
-const me = new User({
-  name: "Vanshika",
-  age: 21,
+const me2 = new cat({
+  name: "                 vfsg",
+  age: 63,
 });
-me.save().then((data) => {
-  console.log(data);
-});
-
-const me2 = User.create({
-  name: "Teesha",
-  validate(value) {
-    if (value < 0) {
-      throw new Error("not allowed");
-    }
-  },
-  age: 21,
-});
-console.log(me2);
-me2.then((data) => {
+me2.save().then((data) => {
+  console.log(me2);
   console.log(data);
 });

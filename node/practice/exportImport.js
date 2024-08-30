@@ -1,17 +1,7 @@
-// console.log(process.argv);
-// function multiply(a, b) {
-//   return a * b;
-// }
+const a = 10;
 
-// function add(a, b) {
-//   return a + a;
-// }
-// module.exports = { multiply, add };
+addNum = (num1, num2) => {
+  console.log(num1 + num2);
+};
 
-const { multiply, add } = require("./process");
-
-const mul = multiply(78, 89);
-console.log(mul);
-
-const sum = add(34, 56);
-console.log(sum);
+module.exports = { a, addNum };

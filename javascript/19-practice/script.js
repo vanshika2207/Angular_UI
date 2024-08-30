@@ -100,6 +100,7 @@
 // //strict check
 // console.log(val1 === val3); //false
 // console.log(val4 === val2); //float and integer are equal
+
 // console.log(val1 > val2);
 // //template literal
 // console.log(`${val1}>${val2}`);
@@ -150,6 +151,7 @@
 // //truthy values:'abc',234,empty object {}
 
 // //exception empty object are not falsy values
+
 // console.log(Boolean({})); //true
 
 // console.log("hello " + 23 + "  how are u " + "10");
@@ -392,7 +394,7 @@
 //   console.log(key, val, map);
 // });
 
-// //forEach()-does not written any new array
+// //forEach()-does not return any new array
 
 // //array data transformation functions
 // //map()-similar to forEach() but written a new array
@@ -507,6 +509,7 @@
 //   newArr[i] = arr1[i] + 4;
 // }
 // console.log(newArr);
+
 //DOM MANIPULATION
 
 //SELECTING ,CREATING AND DELETING ELEMENTS
@@ -580,6 +583,7 @@
 // console.log(button.getAttribute("href"));
 // button.href = "/mobile";
 // console.log(button.href);
+
 // //traversing
 // console.log(document);
 // console.log(document.firstElementChild);
